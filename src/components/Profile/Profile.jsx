@@ -1,29 +1,37 @@
-export const Profile = ({name, tag, location, image, stats }) => {
-  <div>
-    <div>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-        alt="User avatar"
+ import styles from './Profile.module.css'
+ 
+ const Profile = ({ username, tag, location, avatar, stats: {
+      followers, 
+      views,
+      likes },
+    }) => {
+      return (
+  <div className={styles.container}>
+    <div className={styles.wrapper}>
+      <img className={styles.img} 
+        src={avatar}
+        alt={tag}
       />
-      <p>Petra Marica</p>
-    <p>@pmarica</p>
-    <p>Salvador, Brasil</p>
-  
+      <p className={styles.username}>{username}</p>
+      <p className={styles.tag}>@{tag}</p>
+      <p className={styles.location}>{location}</p>
     </div>
-
-    <ul>
-      <li>
-     <span>Followers</span>
-     <span>1000</span>
+    <ul className={styles.list}>
+      <li className={styles.item}>
+        <span className={styles.dataName}>Followers</span>
+        <span className={styles.number}>{followers}</span>
       </li>
-
-      <li>
-    <span>Views</span>
-    <span>2000</span>
+      <li className={styles.item}>
+        <span className={styles.dataName}>Views</span>
+        <span className={styles.number}>{views}</span>
       </li>
-      <li>
-      <span>Likes</span><span>3000</span>
+      <li className={styles.item}>
+        <span className={styles.dataName}>Likes</span>
+        <span className={styles.number}>{likes}</span>
       </li>
     </ul>
-  </div>;
+  </div>
+      );
 };
+
+export default Profile;
