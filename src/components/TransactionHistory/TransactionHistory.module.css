@@ -1,0 +1,38 @@
+.table{
+    width: 650px;
+    height: 100%;
+  margin: 50px auto;
+  border-collapse: collapse;
+
+
+}
+.thead{
+    border: 2px solid black;
+    background-color: black;
+  color: white;
+  height: 35px;
+
+}
+.title{
+    width: 100px;
+    color: white;
+
+}
+
+.tbody{
+    border: 2px solid black;
+}
+
+.type{
+    padding: 5px;
+    text-align: left;
+    border: 2px solid black;
+    text-align: center;
+}
+
+tr {
+    border: 2px solid black;
+  }
+  tr:nth-child(even) {
+    background-color: lightgray;
+  }
